@@ -1,0 +1,107 @@
+EESchema Schematic File Version 4
+LIBS:addressable_led_board_V1.0-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "PinBus Addressable LED Board"
+Date "2018-07-07"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L conn:CONN_01X03 J1
+U 1 1 5B3D3551
+P 6800 3500
+F 0 "J1" H 6800 3700 50  0000 C CNN
+F 1 "CONN_01X03" V 6900 3500 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B03B-XH-A_03x2.50mm_Straight" H 6800 3500 50  0001 C CNN
+F 3 "" H 6800 3500 50  0000 C CNN
+	1    6800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L conn:CONN_01X03 J2
+U 1 1 5B3D35AF
+P 6800 4200
+F 0 "J2" H 6800 4400 50  0000 C CNN
+F 1 "CONN_01X03" V 6900 4200 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B03B-XH-A_03x2.50mm_Straight" H 6800 4200 50  0001 C CNN
+F 3 "" H 6800 4200 50  0000 C CNN
+	1    6800 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5B3D35E3
+P 6050 3850
+F 0 "C1" H 6075 3950 50  0000 L CNN
+F 1 "100nF" H 6075 3750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6088 3700 50  0001 C CNN
+F 3 "" H 6050 3850 50  0000 C CNN
+	1    6050 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED1:SK6812 U1
+U 1 1 5B3E67DB
+P 5350 3850
+F 0 "U1" H 5550 4075 50  0000 R BNN
+F 1 "SK6812" H 5400 3625 50  0000 L TNN
+F 2 "serial_led:SK6812_HandSoldering" H 5400 3550 50  0001 L TNN
+F 3 "" H 5450 3475 50  0001 L TNN
+	1    5350 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4200 6400 4200
+Wire Wire Line
+	5350 4200 5350 4150
+Wire Wire Line
+	6050 4000 6050 4200
+Connection ~ 6050 4200
+Wire Wire Line
+	6400 3500 6600 3500
+Wire Wire Line
+	6400 3500 6400 4200
+Connection ~ 6400 4200
+Wire Wire Line
+	6500 4100 6600 4100
+Wire Wire Line
+	6600 4300 4950 4300
+Wire Wire Line
+	4950 4300 4950 3850
+Wire Wire Line
+	4950 3850 5050 3850
+Wire Wire Line
+	5650 3850 5750 3850
+Wire Wire Line
+	5750 3850 5750 3400
+Wire Wire Line
+	5750 3400 6600 3400
+Wire Wire Line
+	5350 3550 5350 3450
+Wire Wire Line
+	5350 3450 6050 3450
+Wire Wire Line
+	6500 3450 6500 3600
+Wire Wire Line
+	6500 3600 6600 3600
+Wire Wire Line
+	6050 3700 6050 3450
+Connection ~ 6050 3450
+Connection ~ 6500 3600
+Wire Wire Line
+	6050 4200 5350 4200
+Wire Wire Line
+	6400 4200 6050 4200
+Wire Wire Line
+	6050 3450 6500 3450
+Wire Wire Line
+	6500 3600 6500 4100
+$EndSCHEMATC
